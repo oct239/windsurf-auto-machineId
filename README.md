@@ -48,7 +48,6 @@ python main.py
 
 ## 安全特性
 
--   ✅ 修改前自动创建备份文件
 -   ✅ 完整的错误处理机制
 -   ✅ 修改后设置文件为只读
 -   ✅ 详细的操作日志输出
@@ -79,8 +78,6 @@ python main.py
 ✅ APPDATA路径: C:\Users\Username\AppData\Roaming
 🎯 目标文件: C:\Users\Username\AppData\Roaming\Windsurf\User\globalStorage\storage.json
 ✅ 目标文件存在
-💾 创建备份文件...
-✅ 备份文件已创建: C:\Users\Username\AppData\Roaming\Windsurf\User\globalStorage\storage.json.backup
 📖 读取配置文件...
 ✅ 配置文件读取成功
 🔧 生成新的机器标识...
@@ -102,7 +99,6 @@ python main.py
 
 ==================================================
 🎉 机器码修改完成！
-📁 备份文件: C:\Users\Username\AppData\Roaming\Windsurf\User\globalStorage\storage.json.backup
 ⚠️  注意：文件已设置为只读，如需再次修改请先取消只读属性
 
 按任意键退出...
